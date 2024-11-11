@@ -25,25 +25,29 @@ body{
     }
   /*BOTON INICIO----------------------------------------------------*/
   .salida{
-      background-color:rgba(255, 255, 255, 0.5);
+  background-color:rgba(255, 255, 255, 0.5);
   width:100px;
-  text-align: center;
   border-radius: 10px;
+  margin: 5px;
   
   }
   .inicio{
-  margin-top: 0px;
   color: #132f54;
   font-family:  Franklin Gothic Medium;
-  font-size: 30px;
+  font-size: 25px;
+  margin-left: 20px;
   }
   .logoinicio{
-    margin-top: 10px;
-    height: 60px;
+    height: 65px;
     border-radius: 5px;
+    margin: auto;
+    padding-top: 5px;
   }
   
     /*HEAD----------------------------------------------------*/
+    header{
+      position: absolute;
+    }
    .menu1 {
       display:flex;
       justify-content: space-evenly;
@@ -54,12 +58,11 @@ body{
       margin-right: 50px;
       margin-top: 0px;
       font-family: Franklin Gothic Medium;
-      
+      height: 120px;
     }
   .cabeza h1{
     font-size: 50px;
       color:#132f54;
-     
       display:flex;
   }
    
@@ -88,7 +91,7 @@ body{
      .logolola {
       height: 80px;
       border-radius:15px;
-      margin-top: 10px;
+      margin:auto;
    
       
     }
@@ -129,27 +132,32 @@ body{
   
     }
     /*CUADRO INICIO ----------------------------------------------------*/
-    .mensaje-bienvenida{
-      font-family: Rubik  ;
+    .infoinicio h2{
+      font-family: Franklin Gothic Medium  ; 
       text-align: center;
-      font-size: 40PX;
+      font-size: 3em;
      
     }
-    .cuadro{
-      margin-top:50px;
+    .cuadroinicio{
+      justify-content:space-between;
       background-color: #ffffff;
       border-radius: 20px;
-      text-align: center;
-      padding: 40px;
-      margin-inline: 100%;
-      margin-bottom: 10%;
+      text-align: left;
+      padding: 80px;
+      margin-inline: 30%;
+      margin-bottom: 5%;
+      margin-top: 5%;
       font-family: Gill Sans MT;
-      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+
+    } 
+    .infoinicio{
+      margin-inline: auto;
     }
-    .cuadro h1{
-      font-size: 30px;
+    .cuadroinicio h1{
+      font-size: 2em;
+    
     }
-    .cuadro button{
+    .cuadroinicio button{
      width: 30%;
       border-radius: 20px;
       background-color: #cfceda;
@@ -157,27 +165,48 @@ body{
       text-decoration: none;
   
     }
-    .cuadro button:hover{
+    .cuadroinicio button:hover{
       background-color: #ffdf57;
     }/*CUADRO CONTRASEÑA ----------------------------------------------------*/
-    .cuadro{
+    .cuadrocontraseña{
       background-color: #ffffff;
       border-radius: 20px;
       text-align: left;
       padding: 80px;
-      margin-inline: 15%;
-      margin-bottom: 10%;
+      margin-inline: 30%;
+      margin-bottom: 5%;
+      margin-top: 5%;
       font-family: Gill Sans MT;
     }
-    /*INPUT CONTRASEÑA ----------------------------------------------------*/
+    .cuadrocontraseña h2{
+      font-family: Franklin Gothic Medium  ; 
+      text-align: center;
+      font-size: 3em;
+    }
+    .cuadrocontraseña h1{
+      font-family: Gill Sans MT;
+      font-size: 2em;
+    }
+    .cuadrocontraseña button{
+      width: 30%;
+       border-radius: 20px;
+       background-color: #cfceda;
+       border-color: #132f54;
+       text-decoration: none;
+   
+     }
+     .cuadrocontraseña button:hover{
+       background-color: #ffdf57;
+     }
    .contraseña{
     height: 40px;
     border-radius:20px ;
     border-style:ridge;
     border-color:#cfceda ;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
    }
    /*CUADRO PUBLICACION ----------------------------------------------------*/
-   .publi h1{
+   .cuadropubli h2{
     font-family: Rubik  ;
     text-align: center;
     font-size: 50PX;
@@ -196,7 +225,7 @@ body{
   }
   
   .cuadropubli button{
-   width: 60%;
+   width: 40%;
     border-radius: 20px;
     background-color: #cfceda;
     border-color: #132f54;
@@ -232,14 +261,16 @@ body{
   
   /*PRINCIPAL ----------------------------------------------------*/
   .principal{
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 1100px;
+    margin: auto;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     padding: 100px;
     font-family: Gill Sans MT;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   
   
@@ -300,8 +331,10 @@ body{
     color: #555;
   }
   .seccion{
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);

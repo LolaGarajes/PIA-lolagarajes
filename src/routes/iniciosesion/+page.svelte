@@ -6,12 +6,16 @@
     <h1 class="inicio">inicio</h1>
 </div>
 
-<div  class="cuadro">
-    <h1>BIENVENIDO</h1>
+<div  class="cuadrocontraseña">
+    <center>
+    <div class= "infocontraseña">
+    <h2>BIENVENIDO</h2>
     <img src=https://res.cloudinary.com/donhib3cp/image/upload/v1725991696/images%20pagina/nk5jsaw6tl7nvb4nsd88.gif alt="escudo">
     <h1>ingrese la contraseña.</h1>
     <form action="?/crear" method="post">
     <input class="contraseña" type="password" placeholder="Shhh..."name="contraseña" id="confirm-password" />
     <button type="submit">ingresa</button>
-</form>
+    </form>
+    </div>
+</center>
 </div>

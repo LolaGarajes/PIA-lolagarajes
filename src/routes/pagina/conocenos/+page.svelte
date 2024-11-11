@@ -20,7 +20,7 @@
     <h2>Ari Acevedo Giraldo</h2>
     <div style="display: inline-flex ;">
         <p>
-            Ari: líder de diseño y Diseñador de UI(interfaz de usuario)
+             líder de diseño y Diseñador de UI(interfaz de usuario)
             Conocido como Ari, es un chico muy inteligente que tiende a ser reservado con personas en las
             que no tiene mucha confianza. A pesar de su naturaleza introvertida, Ari muestra una notable
             capacidad para adaptarse bien a los cambios cuando se aventura fuera de su zona de confort.
@@ -28,7 +28,7 @@
         <img src="https://res.cloudinary.com/donhib3cp/image/upload/v1729820591/fotoari_ysy4gg.jpg" alt="Ari" />
     </div>
     
-    <h2>Carolina Figueroa Lopez</h2>
+    <h2>Carolina Figueroa López</h2>
     <div
         style="display: inline-flex
         ;"
@@ -61,7 +61,7 @@
             alt="Sam"
         />
     </div>
-    <h2>Daniel Mauricio usuga Cossio</h2>
+    <h2>Daniel Mauricio Usuga Cossio</h2>
     <div
         style="display: inline-flex
         ;"
@@ -78,7 +78,7 @@
             confiar sin dudar.
         </p>
     </div>
-    <h2>Josue Velázquez</h2>
+    <h2>Josue Velázquez Sepulveda</h2>
     <div
         style="display: inline-flex
         ;"

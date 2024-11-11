@@ -2,13 +2,13 @@ import { sqliteTable, integer, foreignKey, text, numeric } from "drizzle-orm/sql
   import { sql } from "drizzle-orm"
 
 export const jornada = sqliteTable("jornada", {
-	idJornada: integer("id_jornada").primaryKey(),
-	nomJornada: text("nom_jornada", { length: 255 }),
+	idJornada: integer().primaryKey(),
+	nomJornada: text({ length: 255 }),
 });
 
-export const tipoEvento = sqliteTable("tipo_evento", {
-	idTipoEvento: integer("id_tipo_evento").primaryKey(),
-	desTipoEvento: text("des_tipo_evento", { length: 255 }),
+export const tipoEvento = sqliteTable("tipoEvento", {
+	idTipoEvento: integer().primaryKey(),
+	desTipoEvento: text({ length: 255 }),
 });
 
 export const lugares = sqliteTable("lugares", {
