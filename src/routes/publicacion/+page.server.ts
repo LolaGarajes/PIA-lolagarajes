@@ -6,6 +6,7 @@ import { eq, and, like } from "drizzle-orm";
 import { uploadImage } from '$lib/server/cloudinary';
 
 
+
 export const load = async () => {
     const jornadas = await db
     .select({

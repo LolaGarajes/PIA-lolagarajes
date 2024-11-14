@@ -2,8 +2,43 @@
     <a href="../"><img src="https://res.cloudinary.com/donhib3cp/image/upload/v1724352997/images%20pagina/c0tqayrqkh5ulx2xqedz.jpg" class="logoinicio"alt=logolola/></a>
     <h1 class="inicio">inicio</h1>
 </div>
-<script>
+<script lang="ts">
     export let data;
+    async function uploadImage() {
+    const fileInput = document.getElementById("fileInput");
+    const status = document.getElementById("status");
+
+    if (fileInput.files.length === 0) {
+        status.textContent = "Selecciona una imagen primero.";
+        return;
+    }
+
+    const file = fileInput.files[0];
+    const formData = new FormData();
+
+    // Añadir el archivo y los parámetros de Cloudinary
+    formData.append("file", file);
+    formData.append("upload_preset", "TU_UPLOAD_PRESET"); // Reemplaza con tu upload_preset
+    formData.append("cloud_name", "TU_CLOUD_NAME"); // Reemplaza con tu cloud_name
+
+    try {
+        // Hacer la petición de subida a Cloudinary
+        const response = await fetch(`https://api.cloudinary.com/v1_1/TU_CLOUD_NAME/image/upload`, {
+            method: "POST",
+            body: formData,
+        });
+
+        const data = await response.json();
+
+        if (data.secure_url) {
+            status.innerHTML = `Imagen subida con éxito: <a href="${data.secure_url}" target="_blank">Ver imagen</a>`;
+        } else {
+            status.textContent = "Error al subir la imagen.";
+        }
+    } catch (error) {
+        status.textContent = "Hubo un error en la subida: " + error.message;
+    }
+}
 </script>
 <div class="publi">
 <div  class="cuadropubli">
@@ -11,9 +46,9 @@
 
 
     <h2>PUBLICACIÓN</h2>
- 
+    <p id="status"></p>
     
-    <form action="?/guardar" method="post">
+    <form action="?/guardar" method="post" id="uploadForm">
         
          <!-- <input> 
         class="imagenpublicacion"
@@ -21,7 +56,7 @@
         onchange={() => onChange()}
         type="file"
         accept=".jpg,.png,.svg.,jpeg"-->
-    
+
    
         <label for="tit"> ingrese el nombre:
 
@@ -68,11 +103,11 @@
                 {/each}
             </select>
         </label>
-       
+        <input type="file" id="fileInput" accept="image/*" />
         
         <br>
     <center>
-        <button type="submit" id="boton">Enviar datos</button>
+        <!-- <button type="button" id="boton" onclick="uploadImage()">Enviar datos</button>  -->
     </center>
     </form>
 

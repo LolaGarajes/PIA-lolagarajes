@@ -1,11 +1,12 @@
 <script>
+  import '../app.css'
 export let data;
 </script>
 <section class="principal">
   <div class="evento-container">
   {#each data.consulta as item}
     <h1>{item.nomevento}</h1>
-    <p class="evento-fecha">{item.fechaevento}<p/>
+    <p class="evento-fecha">{item.fechaevento} <p/>
       <div class="evento-imagen">
         <center>
         <img src="#" alt="img">
