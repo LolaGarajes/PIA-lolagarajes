@@ -1,22 +1,39 @@
 <script>
 export let data
+
+let showDesc = false;
+
+function showsection(){
+  showDesc=!showDesc;
+}
+
 </script>
+
+
+
+
 <section class="principal">
   <div class="evento-container">
   {#each data.consulta as item}
+  <br>
     <h1>{item.nomevento}</h1>
-    <p class="evento-fecha">{item.fechaevento} <p/>
+    <p class="evento-fecha">{item.fechaevento} </p>
       <div class="evento-imagen">
         <center>
         <img src="{item.urlimagen}" alt="img">
       </center>
       </div>
+
+      <button on:click={showsection} class="showdesc">
+        {showDesc ? 'Ocultar Descripción' : 'Mostrar Descripción'}  
+      </button>
+
+      {#if showDesc}
       <section class="evento-descripcion">
         <p>
        { item.descevento}
         </p>
-      </section>
-<label for="toggle">Detalles Evento</label>
+
 <input type="checkbox" id="toggle" style="display: none;" />
 <div class="hidden-info">
   <div class="evento-info">
@@ -34,6 +51,8 @@ export let data
     </div>
   </div>
 </div>
+</section>
+{/if}
 <hr>
   {/each}
   </div>

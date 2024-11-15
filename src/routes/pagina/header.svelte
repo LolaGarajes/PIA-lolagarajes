@@ -14,6 +14,6 @@
 <ul class="menu2">
 	<li><a href="/pagina/periodico">Periodico</a></li>
 	<li><a href="/pagina/institucion">Reseña Histórica</a></li>
-	<li><a href="/pagina/conocenos">Conocenos</a></li>
+	<li><a href="/pagina/conocenos">Conócenos</a></li>
 </ul>
 </div>

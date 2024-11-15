@@ -11,7 +11,7 @@
 
 	let new_image_url = '';
 
-
+	let WITH = 900
 
 	let image: { id: number; secureUrl: string } = $state({ id: 0, secureUrl: '' });
 
@@ -101,22 +101,22 @@
  
     <input type="hidden" name="send_image" bind:value={image.secureUrl} />
 
-    <label for="tit"> ingrese el nombre:
+    <label for="tit"> Ingrese el nombre:
 
     <input class="tit" name="tit" type="text" placeholder="Escribir titulo..." required/>
     </label>
 
-    <label for="desc">añada una descripcion:
+    <label for="desc"> Añada una descripcion:
 
     <input class="desc" name="desc" type="text" placeholder="Añada una descripción..." required/>
     </label>
     
-    <label for="fecha">Añada la fecha
+    <label for="fecha"> Añada la fecha:
 
     <input class="fecha" name="fecha" type="date" placeholder = "ingrese la fecha" required/>
     </label>
 
-    <label for="tipoevento"> indique el tipo de evento:
+    <label for="tipoevento"> Indique el tipo de evento:
         <select name="tipoevento">
             <option value = {0} selected></option>
             {#each data.tipo_evento as item}
@@ -126,7 +126,7 @@
             {/each}
         </select>
     </label>
-   <label for="jornada"> indique la jornada:
+   <label for="jornada"> Indique la jornada:
         <select name="jornada" >
             <option value={0} selected></option>
             {#each data.jornadas as item}
@@ -136,7 +136,7 @@
             {/each}
         </select>
     </label>
-    <label for="lugar">indique el lugar:
+    <label for="lugar"> Indique el lugar:
         <select name="lugar" > 
             <option  value = {0} selected></option>
             {#each data.lugar as item }

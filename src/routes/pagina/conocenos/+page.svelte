@@ -20,7 +20,7 @@
     <h2>Ari Acevedo Giraldo</h2>
     <div style="display: inline-flex ;">
         <p>
-             líder de diseño y Diseñador de UI(interfaz de usuario)
+            Líder de diseño y Diseñador de UI (interfaz de usuario)
             Conocido como Ari, es un chico muy inteligente que tiende a ser reservado con personas en las
             que no tiene mucha confianza. A pesar de su naturaleza introvertida, Ari muestra una notable
             capacidad para adaptarse bien a los cambios cuando se aventura fuera de su zona de confort.
@@ -38,7 +38,7 @@
             alt="Carolina"
         />
         <p>
-             Project manager y desarrolladora de frontend.
+            Project manager y desarrolladora de frontend.
             Carolina Figueroa es una chica muy alegre e inteligente que siempre busca adquirir nuevos
             conocimientos, ya sea de manera didáctica o autodidacta. Con una pasión por aprender y explorar,
             Carolina se destaca no solo por su intelecto, sino también por su entusiasmo contagioso y su
@@ -51,7 +51,7 @@
     ;"
     >
         <p>
-             Encargado del desarrollo de la base de datos y diseñador.
+            Encargado del desarrollo de la base de datos y diseñador.
             Samuel Jiménez es un chico amigable, sociable e inteligente que siempre está en la búsqueda de
             nuevas experiencias, tanto positivas como desafiantes. Su naturaleza extrovertida y su capacidad
             para relacionarse con los demás lo convierten en una figura central en su entorno social.
@@ -85,7 +85,7 @@
     >
         <p>
         
-             tester y verificación de la experiencia del usuario.
+            Tester y verificador de la experiencia del usuario.
             Josué Velázquez es un chico muy enérgico y alegre, apasionado por el deporte. Su entusiasmo y
             dinamismo lo convierten en una persona muy sociable, con un amplio círculo de amigos. A pesar de
             su carácter fuerte, Josué solo muestra este lado con quienes realmente lo merecen, demostrando
