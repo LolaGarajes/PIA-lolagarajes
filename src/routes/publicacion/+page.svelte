@@ -3,7 +3,7 @@
     <h1 class="inicio">inicio</h1>
 </div>
 <script>
-    export let data;
+   
     let input: HTMLInputElement | undefined = $state(undefined);
 
 let new_image_url = '';
