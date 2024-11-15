@@ -29,5 +29,11 @@ export const eventos = sqliteTable("eventos", {
 	idTipoEvento: integer().references(() => tipoEvento.idTipoEvento),
 	idLugar: integer().references(() => lugares.idLugar),
 	idJornada: integer().references(() => jornada.idJornada),
+	idImagen: numeric().references(() => imagen.idImagen),
+});
+
+export const imagen = sqliteTable("imagen", {
+	idImagen: integer().primaryKey({ autoIncrement: true }),
+	urlImagen: text("URLImagen"),
 });
 

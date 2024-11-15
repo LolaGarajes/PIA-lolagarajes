@@ -1,11 +1,9 @@
 import { db } from '$lib/server/database/connection';
-import {jornada,tipoEvento,lugares,eventos} from '$lib/server/database/schema'
+import {jornada,tipoEvento,lugares,eventos,imagen} from '$lib/server/database/schema'
 import { fail } from "@sveltejs/kit";
 import { LibsqlError } from '@libsql/client';
 import { eq, and, like } from "drizzle-orm";
 import { uploadImage } from '$lib/server/cloudinary';
-
-
 
 export const load = async () => {
     const jornadas = await db
@@ -29,27 +27,43 @@ export const load = async () => {
     })
     .from(lugares);
 
+    const imagenes = await db
+    .select({
+        idimagen : imagen.idImagen,
+        urlimagen : imagen.URLImagen
+    })
+    .from(imagen);
 
-	return {jornadas, tipo_evento,lugar};
+	return {jornadas, tipo_evento,lugar,imagenes};
 }
 
-export const actions = {
-    guardar: async ({request}) => {
-        const formData = await request.formData();
-        const data = Object.fromEntries(formData);
-        console.log(data);
 
+export const actions = {
+	subir: async ({ request }:{request:Request}) => {
+		const data = Object.fromEntries(await request.formData());
+		const imagenes = await uploadImage(data.send_image as File);
+		const datos = imagenes.secure_url
+        const imgid = imagenes.id
+        type Imagen = typeof imagen.$inferSelect
+        let img
         try {
+             img = await db.insert(imagen).values({
+                idImagen : imgid,
+                URLImagen :datos,
+                
+            }).returning()
+
+            console.log(img)
             await db.insert(eventos).values({
                 tituloEvento: data.tit as string,
                 descEvento: data.desc as string,
                 fecEvento: data.fecha as string,
                 idTipoEvento: parseInt(data.tipoevento as string),
                 idJornada: parseInt(data.jornada as string),
-                idLugar: parseInt(data.lugar as string)
-
-
+                idLugar:parseInt(data.lugar as string),
+                idImagen: img[0].idImagen
             })
+
         } catch (error) {
             if (error instanceof LibsqlError) {
                 console.log(error);
@@ -58,6 +72,8 @@ export const actions = {
         }
 
         return { success: true };
-    }
+    
+	
+	},
 
 }

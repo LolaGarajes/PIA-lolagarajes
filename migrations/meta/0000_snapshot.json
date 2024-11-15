@@ -7,16 +7,16 @@
     "jornada": {
       "name": "jornada",
       "columns": {
-        "id_jornada": {
+        "idJornada": {
           "autoincrement": false,
-          "name": "id_jornada",
+          "name": "idJornada",
           "type": "integer",
           "primaryKey": true,
           "notNull": false
         },
-        "nom_jornada": {
+        "nomJornada": {
           "autoincrement": false,
-          "name": "nom_jornada",
+          "name": "nomJornada",
           "type": "text(255)",
           "primaryKey": false,
           "notNull": false
@@ -28,19 +28,19 @@
       "uniqueConstraints": {},
       "checkConstraints": {}
     },
-    "tipo_evento": {
-      "name": "tipo_evento",
+    "tipoEvento": {
+      "name": "tipoEvento",
       "columns": {
-        "id_tipo_evento": {
+        "idTipoEvento": {
           "autoincrement": false,
-          "name": "id_tipo_evento",
+          "name": "idTipoEvento",
           "type": "integer",
           "primaryKey": true,
           "notNull": false
         },
-        "des_tipo_evento": {
+        "desTipoEvento": {
           "autoincrement": false,
-          "name": "des_tipo_evento",
+          "name": "desTipoEvento",
           "type": "text(255)",
           "primaryKey": false,
           "notNull": false
@@ -90,6 +90,30 @@
           "autoincrement": false,
           "name": "contraseña",
           "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "imagen": {
+      "name": "imagen",
+      "columns": {
+        "idImagen": {
+          "autoincrement": false,
+          "name": "idImagen",
+          "type": "numeric",
+          "primaryKey": true,
+          "notNull": false
+        },
+        "URLImagen": {
+          "autoincrement": false,
+          "name": "URLImagen",
+          "type": "text",
           "primaryKey": false,
           "notNull": false
         }
@@ -151,6 +175,13 @@
           "type": "integer",
           "primaryKey": false,
           "notNull": false
+        },
+        "idImagen": {
+          "autoincrement": false,
+          "name": "idImagen",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
         }
       },
       "compositePrimaryKeys": {},
@@ -191,6 +222,19 @@
           ],
           "columnsTo": [
             "idJornada"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "eventos_idImagen_imagen_idImagen_fk": {
+          "name": "eventos_idImagen_imagen_idImagen_fk",
+          "tableFrom": "eventos",
+          "tableTo": "imagen",
+          "columnsFrom": [
+            "idImagen"
+          ],
+          "columnsTo": [
+            "idImagen"
           ],
           "onDelete": "no action",
           "onUpdate": "no action"

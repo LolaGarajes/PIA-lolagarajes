@@ -18,6 +18,7 @@
 		"@tailwindcss/typography": "^0.5.15",
 		"@types/eslint": "^9.6.0",
 		"autoprefixer": "^10.4.20",
+		"drizzle-kit": "^0.28.1",
 		"eslint": "^9.7.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.36.0",
@@ -37,7 +38,6 @@
 		"@libsql/client": "^0.14.0",
 		"cloudinary": "^2.5.1",
 		"dotenv": "^16.4.5",
-		"drizzle-kit": "^0.28.0",
-		"drizzle-orm": "^0.36.1"
+		"drizzle-orm": "^0.36.2"
 	}
 }

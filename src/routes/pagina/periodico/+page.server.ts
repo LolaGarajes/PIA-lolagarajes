@@ -1,5 +1,5 @@
 import { db } from '$lib/server/database/connection';
-import {jornada,tipoEvento,lugares,eventos} from '$lib/server/database/schema'
+import {jornada,tipoEvento,lugares,eventos,imagen} from '$lib/server/database/schema'
 import { fail } from "@sveltejs/kit";
 import { LibsqlError } from '@libsql/client';
 import { eq, and, like } from "drizzle-orm";
@@ -16,11 +16,14 @@ export const load = async () => {
         idlugar: eventos.idLugar,
         nomlugar:lugares.nomLugar,
         idjornada: eventos.idJornada,
-        nomjornada:jornada.nomJornada
+        nomjornada:jornada.nomJornada,
+        idimagen:imagen.idImagen,
+        urlimagen:imagen.URLImagen
     })
     .from(eventos)
     .leftJoin(tipoEvento, eq(eventos.idTipoEvento, tipoEvento.idTipoEvento))
     .leftJoin(lugares, eq(eventos.idLugar,lugares.idLugar))
     .leftJoin(jornada, eq (eventos.idJornada,jornada.idJornada))
+    .leftJoin(imagen, eq (eventos.idImagen,imagen.idImagen))
     return {consulta}
 };

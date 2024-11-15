@@ -1,5 +1,5 @@
 import { relations } from "drizzle-orm/relations";
-import { tipoEvento, eventos, lugares, jornada } from "./schema";
+import { tipoEvento, eventos, lugares, jornada, imagen } from "./schema";
 
 export const eventosRelations = relations(eventos, ({one}) => ({
 	tipoEvento: one(tipoEvento, {
@@ -14,6 +14,10 @@ export const eventosRelations = relations(eventos, ({one}) => ({
 		fields: [eventos.idJornada],
 		references: [jornada.idJornada]
 	}),
+	imagen: one(imagen, {
+		fields: [eventos.idImagen],
+		references: [imagen.idImagen]
+	}),
 }));
 
 export const tipoEventoRelations = relations(tipoEvento, ({many}) => ({
@@ -25,5 +29,9 @@ export const lugaresRelations = relations(lugares, ({many}) => ({
 }));
 
 export const jornadaRelations = relations(jornada, ({many}) => ({
+	eventos: many(eventos),
+}));
+
+export const imagenRelations = relations(imagen, ({many}) => ({
 	eventos: many(eventos),
 }));

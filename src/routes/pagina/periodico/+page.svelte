@@ -1,6 +1,5 @@
 <script>
-  import '../app.css'
-export let data;
+export let data
 </script>
 <section class="principal">
   <div class="evento-container">
@@ -9,7 +8,7 @@ export let data;
     <p class="evento-fecha">{item.fechaevento} <p/>
       <div class="evento-imagen">
         <center>
-        <img src="#" alt="img">
+        <img src="{item.urlimagen}" alt="img">
       </center>
       </div>
       <section class="evento-descripcion">

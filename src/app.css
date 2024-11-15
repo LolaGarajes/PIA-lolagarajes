@@ -58,6 +58,7 @@ body{
       margin-right: 50px;
       margin-top: 0px;
       font-family: Franklin Gothic Medium;
+      font-size: 6 em;
       height: 120px;
     }
   .cabeza h1{
@@ -98,7 +99,7 @@ body{
    
     .libro{
       padding-top: 20px;
-      height: 80px;
+      height: 100px;
      
     
     }
