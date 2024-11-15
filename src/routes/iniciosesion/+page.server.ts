@@ -1,5 +1,5 @@
 import { fail, redirect } from '@sveltejs/kit';
-import { db } from '$lib/server/database/connection';
+import { db } from '$lib/server/database/index';
 import type { Actions } from './$types';
 import { admin } from '$lib/server/database/schema';
 import { eq, and } from "drizzle-orm";
