@@ -1,4 +1,4 @@
-import { db } from '$lib/server/database/connection';
+import { db } from '$lib/server/database/index';
 import {jornada,tipoEvento,lugares,eventos,imagen} from '$lib/server/database/schema'
 import { fail } from "@sveltejs/kit";
 import { LibsqlError } from '@libsql/client';
